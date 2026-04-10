@@ -38,13 +38,21 @@ class DashboardController extends Controller
             ->groupBy('ubicacion')
             ->get();
 
+        // 👇 NUEVA CONSULTA para reactivos próximos a caducar (ej. en 60 días)
+        $reactivosProximosCaducar = Reactivo::with('registradoPor')
+            ->where('fecha_caducidad', '<=', now()->addDays(60))
+            ->where('fecha_caducidad', '>=', now())
+            ->orderBy('fecha_caducidad', 'asc')
+            ->get();
+
         return view('dashboard.index', compact(
             'totalReactivos',
             'reactivosPorCaducar',
             'reactivosCaducados',
             'totalUnidades',
             'ultimosReactivos',
-            'reactivosPorUbicacion'
+            'reactivosPorUbicacion',
+            'reactivosProximosCaducar'
         ));
     }
 }

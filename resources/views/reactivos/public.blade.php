@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $reactivo->nombre }} | Inventario Lab</title>
+    <title>{{ $reactivo->nombre }} | TrackedLab</title>
     
     <!-- Fuente Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -199,7 +199,7 @@
             <div class="qr-logo">
                 <i class="fas fa-flask"></i>
             </div>
-            <h1>Inventario Lab</h1>
+            <h1>TrackedLab</h1>
             <p>Sistema de Gestión de Reactivos</p>
         </div>
         
@@ -318,7 +318,7 @@
         
         <!-- Footer -->
         <div class="qr-footer">
-            <i class="fas fa-flask"></i> Inventario Lab · Sistema de Gestión de Reactivos
+            <i class="fas fa-flask"></i> TrackedLab · Sistema de Gestión de Reactivos
         </div>
     </div>
 </body>

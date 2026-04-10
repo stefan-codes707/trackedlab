@@ -80,4 +80,9 @@ public function getQrImageAttribute($value)
         
         return now()->greaterThan($this->fecha_caducidad);
     }
+
+public function movimientos()
+{
+    return $this->hasMany(Movimiento::class)->latest();
+}
 }

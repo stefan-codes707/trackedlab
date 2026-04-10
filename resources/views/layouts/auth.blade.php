@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Inventario Lab')</title>
+    <title>@yield('title', 'TrackedLab')</title>
     
     <!-- Fuente Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -159,9 +159,9 @@
     <div class="auth-container">
         <div class="auth-card">
             <div class="auth-logo">
-                <i class="fas fa-flask"></i>
+                <img src="{{ asset('trackedlab_logo.png') }}" alt="TrackedLab Logo" style="max-width: 150px;">
             </div>
-            <div class="auth-title">Inventario Lab</div>
+            <div class="auth-title">TrackedLab</div>
             <div class="auth-subtitle">@yield('subtitle', 'Sistema de Gestión de Reactivos')</div>
             
             <!-- Alertas -->

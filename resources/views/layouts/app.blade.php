@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Inventario Lab')</title>
+    <title>@yield('title', 'TrackedLab')</title>
     
     <!-- Fuente Inter (Google Fonts) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -358,7 +358,7 @@
         <!-- Sidebar Izquierdo -->
         <div class="sidebar">
             <div class="sidebar-logo">
-                <h3>Inventario Lab</h3>
+                <h3>TrackedLab</h3>
                 <p>Gestión de reactivos</p>
             </div>
             
@@ -380,6 +380,11 @@
                     <a href="{{ route('reactivos.create') }}" class="nav-link {{ request()->routeIs('reactivos.create') ? 'active' : '' }}">
                         <i class="fas fa-plus"></i>
                         <span>Registrar</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('movimientos.index') }}">
+                        <i class="fas fa-exchange-alt"></i> Movimientos
                     </a>
                 </li>
                 <li class="nav-item" style="margin-top: 2rem;">

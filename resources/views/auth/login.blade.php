@@ -37,7 +37,7 @@
     
     <div style="text-align: center; margin-top: 1.5rem;">
         <a href="{{ route('register') }}">
-            ¿No tienes cuenta? Regístrate
+            ¿No tienes cuenta? Regístrateee
         </a>
     </div>
 </form>

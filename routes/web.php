@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ReactivoController;
+use App\Http\Controllers\MovimientoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,7 @@ Route::post('/login', [LoginController::class, 'login']);
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register']);  // <-- CORREGIDO
 
+
 // Redirección de la raíz
 Route::get('/', function () {
     return redirect('/login');
@@ -36,6 +38,7 @@ Route::middleware('auth')->group(function () {
     
     // Reactivos (CRUD completo)
     Route::resource('reactivos', ReactivoController::class);
+    Route::resource('movimientos', MovimientoController::class)->except(['edit', 'update', 'destroy']);
     Route::get('/reactivos/{reactivo}/download-qr', [ReactivoController::class, 'downloadQR'])->name('reactivos.download-qr');
     Route::get('/scan-qr', [ReactivoController::class, 'scanQR'])->name('reactivos.scan');
     Route::post('/verify-qr', [ReactivoController::class, 'verifyQR'])->name('reactivos.verify-qr');
